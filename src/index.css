@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  
+  --color-canvas-light: #FAFAFA;
+  --color-canvas-dark: #0A0A0A;
+  --color-text-primary: #171717;
+  --color-text-secondary: #737373;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-canvas-light);
+  color: var(--color-text-primary);
+  overflow-x: hidden;
+}
+
+/* Сглаживание шрифтов */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Утилита для glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
